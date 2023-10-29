@@ -1,0 +1,157 @@
+.background {
+  z-index: 1;
+}
+
+.astro-container {
+  width: 39rem;
+  height: 15rem;
+  display: flex;
+  border-radius: 12.5rem;
+  z-index: 10;
+  box-shadow: 0px 7px 9px 0px rgba(0, 0, 0, 0.25) inset,
+    0px -1px 13px 0px rgba(0, 0, 0, 0.25) inset,
+    0px -3px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.raio {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  z-index: 4;
+  border-radius: 10rem;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+
+  &-dois {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 18rem;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &-tres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 38rem;
+    height: 38rem;
+    border-radius: 28rem;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/*  DIA  */
+.dia {
+  background-color: #357bb3;
+  padding: 1rem 2rem;
+}
+
+.sol {
+  z-index: 10;
+  width: 13rem;
+  height: 13rem;
+}
+
+.transition-sol {
+  animation-name: animation-sol;
+  animation-duration: 1s;
+  left: 22rem;
+}
+
+.clouds {
+  position: absolute;
+  z-index: 3;
+  top: 1rem;
+  width: 39rem;
+
+  &-front {
+    right: 0;
+    position: absolute;
+    top: 0.6rem;
+    border-top-right-radius: 4.5rem;
+    border-bottom-right-radius: 7.3rem;
+    border-bottom-left-radius: 1.5rem;
+    animation-name: animation-clouds;
+    animation-duration: 0.4s;
+  }
+
+  &-back {
+    right: 0;
+    position: absolute;
+    top: -0.5rem;
+    z-index: 2;
+    animation-name: animation-clouds;
+    animation-duration: 0.4s;
+  }
+}
+/*  FIM DIA  */
+
+/*  NOITE  */
+.noite {
+  background-color: #1c1f2c;
+}
+
+.lua {
+  z-index: 10;
+  padding: 1rem 2rem;
+}
+
+.transition-lua {
+  animation-name: animation-lua;
+  animation-duration: 1s;
+}
+
+.stars {
+  width: fit-content;
+  position: absolute;
+  z-index: 3;
+  top: 4rem;
+  left: 3.2rem;
+  animation-name: animation-stars;
+  animation-duration: 0.8s;
+}
+/* FIM NOITE  */
+
+/*  ANIMAÇÕES  */
+@keyframes animation-sol {
+  from {
+    left: 0rem;
+  }
+  to {
+    left: 22rem;
+  }
+}
+
+@keyframes animation-lua {
+  from {
+    left: 22rem;
+  }
+  to {
+    left: 0rem;
+  }
+}
+
+@keyframes animation-clouds {
+  from {
+    top: 3rem;
+  }
+}
+
+@keyframes animation-stars {
+  from {
+    margin-top: -40rem;
+  }
+  to {
+    margin-top: 0rem;
+  }
+}

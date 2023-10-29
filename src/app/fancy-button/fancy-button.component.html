@@ -1,0 +1,31 @@
+<main>
+  <div class="background">
+    <div
+      class="astro-container"
+      [ngClass]="astroSwitch ? 'noite' : 'dia'"
+      (click)="toggleAstro()"
+    >
+      <div
+        class="raio"
+        [ngClass]="astroSwitch ? 'transition-sol' : 'transition-lua'"
+      >
+        <div class="raio-dois">
+          <div class="raio-tres">
+            <img
+              [src]="'../../assets/img/' + astroSrc + '.png'"
+              [alt]="astroSwitch ? 'lua' : 'sol'"
+              class="{{ astroSwitch ? 'lua' : 'sol' }}"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clouds" *ngIf="!astroSwitch">
+      <img class="clouds-front" src=".././../assets/img/clouds_front.png" />
+      <img class="clouds-back" src=".././../assets/img/clouds_back.png" />
+    </div>
+
+    <img class="stars" *ngIf="astroSwitch" src="../../assets/svg/stars.svg" />
+  </div>
+</main>
