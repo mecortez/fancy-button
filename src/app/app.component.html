@@ -1,1 +1,7 @@
-<app-fancy-button />
+<main class="root">
+  <h1>Dia ou noite?</h1>
+  <h2>{{ astro ? "Noite" : "Dia" }}</h2>
+  <div class="container" (click)="toggleAstro()">
+    <app-fancy-button [astroSwitch]="astro" />
+  </div>
+</main>

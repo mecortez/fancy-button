@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fancy-button',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./fancy-button.component.scss'],
 })
 export class FancyButtonComponent {
-  public astroSwitch: boolean = false;
+  @Input() astroSwitch: boolean = false;
   public astroSrc: string = 'sun';
 
   toggleAstro() {
